@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía paso a paso</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/para_que.css') }}">
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="para_que.html">Guía paso a paso</a></li>
+        <li><a href="componentes.html">Consigue tus componentes!!</a></li>
+
+        <li style="margin-left:auto;">
+            <a href="carrito.html">
+                🛒 <span id="contador-carrito">0</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<section class="hero">
+
+    <h1>¿Para qué utilizarás tu computadora?</h1>
+
+    <p>
+        Selecciona el uso principal para recomendarte
+        los componentes ideales.
+    </p>
+
+</section>
+
+<section class="grid-opciones">
+
+    <div class="card" onclick="redirigir('estudio')">
+
+        <img src="{{ url_for('static', filename='css/images/estudio.jpg') }}">
+
+        <h3>📚 Estudio</h3>
+
+        <p>
+            Ideal para tareas, clases virtuales,
+            programación y ofimática.
+        </p>
+
+    </div>
+
+    <div class="card" onclick="redirigir('diario')">
+
+        <img src="{{ url_for('static', filename='css/images/diario.png') }}">
+
+        <h3>💻 Uso diario</h3>
+
+        <p>
+            Navega por internet, ve películas,
+            usa Office y redes sociales.
+        </p>
+
+    </div>
+
+    <div class="card" onclick="mostrarGamas()">
+
+        <img src="{{ url_for('static', filename='css/images/juegos.jpg') }}">
+
+        <h3>🎮 Videojuegos</h3>
+
+        <p>
+            Elige la potencia que necesitas
+            para jugar tus títulos favoritos.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="gamas">
+
+    <h2>Selecciona la gama</h2>
+
+    <div class="grid-opciones">
+
+        <div class="card" onclick="redirigir('gama_baja')">
+
+            <h3>🟢 Gama Baja</h3>
+
+            <p>League of Legends, Minecraft, Valorant...</p>
+
+        </div>
+
+        <div class="card" onclick="redirigir('gama_media')">
+
+            <h3>🟡 Gama Media</h3>
+
+            <p>Fortnite, Warzone, GTA V, Apex...</p>
+
+        </div>
+
+        <div class="card" onclick="redirigir('gama_alta')">
+
+            <h3>🔴 Gama Alta</h3>
+
+            <p>Cyberpunk, Alan Wake II, juegos AAA.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+function mostrarGamas(){
+
+document.getElementById("gamas").style.display="block";
+
+document.getElementById("gamas").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+function redirigir(opcion){
+
+if(opcion=="estudio")
+window.location.href="estudio.html";
+
+if(opcion=="diario")
+window.location.href="diario.html";
+
+if(opcion=="gama_baja")
+window.location.href="gama_baja.html";
+
+if(opcion=="gama_media")
+window.location.href="gama_media.html";
+
+if(opcion=="gama_alta")
+window.location.href="gama_alta.html";
+
+}
+
+function actualizarContadorCarrito(){
+
+let carrito=JSON.parse(localStorage.getItem("carrito"))||[];
+
+document.getElementById("contador-carrito").textContent=carrito.length;
+
+}
+
+actualizarContadorCarrito();
+
+</script>
+
+</body>
+</html>

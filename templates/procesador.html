@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona Componentes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/compra.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="para_que.html">Guía paso a paso</a></li>
+            <li><a href="componentes.html">Consigue tus componentes!!</a></li>
+
+            <!-- Carrito -->
+            <li style="margin-left:auto;">
+                <a href="carrito.html">
+                    🛒 <span id="contador-carrito">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Selecciona tu gama</h1>
+        <p>Elige una categoría para ver los componentes recomendados.</p>
+    </section>
+
+    <div class="selector">
+        <select onchange="mostrarGama(this.value)">
+            <option value="">Selecciona una opción</option>
+            <option value="baja">Gama baja</option>
+            <option value="media">Gama media</option>
+            <option value="alta">Gama alta</option>
+        </select>
+    </div>
+
+    <div id="baja" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ryzen.jpg') }}" alt="Procesador">
+
+    <div class="titulo-card">
+        <h3>AMD Ryzen 5 5500</h3>
+    </div>
+
+    <p>$2,000</p>
+
+    <button onclick="agregarAlCarrito('AMD Ryzen 5 5500', 2000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ryzen-2.jpg') }}" alt="Procesador">
+
+    <div class="titulo-card">
+        <h3>AMD Ryzen 5 5600G</h3>
+    </div>
+
+    <p>$3,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('AMD Ryzen 5 5600G', 3000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/i3.jpg') }}" alt="Procesador">
+
+    <div class="titulo-card">
+        <h3>INTEL Core i3-122100F</h3>
+    </div>
+
+    <p>$2,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('INTEL Core i3-122100F', 2500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+       <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/i3.jpg') }}" alt="Procesador">
+
+    <div class="titulo-card">
+        <h3>INTEL Core i3-13100F</h3>
+    </div>
+
+    <p>$3,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('INTEL Core i3-13100F', 3000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ryzen-3.jpg') }}" alt="Procesador">
+
+    <div class="titulo-card">
+        <h3>AMD Ryzen 3 4100</h3>
+    </div>
+
+    <p>$1,750 MXN</p>
+
+    <button onclick="agregarAlCarrito('AMD Ryzen 3 4100', 1750)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="media" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ryzen-2.jpg') }}" alt="Procesador">
+
+    <div class="titulo-card">
+        <h3>AMD Ryzen 5 7600</h3>
+    </div>
+
+    <p>$4,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('AMD Ryzen 5 7600', 4000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ryzen-7.jpg') }}" alt="Procesador">
+
+    <div class="titulo-card">
+        <h3>AMD Ryzen 7 7700</h3>
+    </div>
+
+    <p>$6,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('AMD Ryzen 7 7700', 6500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/i5.jpg') }}" alt="Procesador">
+
+    <div class="titulo-card">
+        <h3>Intel Core i5-14400F</h3>
+    </div>
+
+    <p>$4,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Intel Core i5-14400F', 4500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/i5.jpg') }}" alt="Procesador">
+
+    <div class="titulo-card">
+        <h3>Intel Core i5-14600K</h3>
+    </div>
+
+    <p>$7,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Intel Core i5-14600K', 7000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ryzen-7.jpg') }}" alt="Procesador">
+
+    <div class="titulo-card">
+        <h3>AMD Ryzen 7 5700X</h3>
+    </div>
+
+    <p>$3,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('AMD Ryzen 7 5700X', 3500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="alta" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ryzen-77.webp') }}" alt="Procesador">
+
+    <div class="titulo-card">
+        <h3>AMD Ryzen 7 9800X3D</h3>
+    </div>
+
+    <p>$10,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('AMD Ryzen 7 9800X3D', 10000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ryzen-9.jpg') }}" alt="Procesador">
+
+    <div class="titulo-card">
+        <h3>AMD Ryzen 9 9900X</h3>
+    </div>
+
+    <p>$8,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('AMD Ryzen 9 9900X', 8000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ryzen-9.jpg') }}" alt="Procesador">
+
+    <div class="titulo-card">
+        <h3>AMD Ryzen 9 9950X</h3>
+    </div>
+
+    <p>$11,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('AMD Ryzen 9 9950X', 11000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/iultra.jpg') }}" alt="Procesador">
+
+    <div class="titulo-card">
+        <h3>Intel Core Ultra 7 265K</h3>
+    </div>
+
+    <p>$10,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Intel Core Ultra 7 265K', 10000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ultra9.jpg') }}" alt="Procesador">
+
+    <div class="titulo-card">
+        <h3>Intel Core Ultra 9 285K</h3>
+    </div>
+
+    <p>$11,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Intel Core Ultra 9 285K', 11000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    <script>
+        function mostrarGama(gama) {
+            document.getElementById("baja").style.display = "none";
+            document.getElementById("media").style.display = "none";
+            document.getElementById("alta").style.display = "none";
+
+            if (gama !== "") {
+                document.getElementById(gama).style.display = "grid";
+            }
+        }
+    </script>
+
+<script>
+function agregarAlCarrito(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    carrito.push({ nombre, precio });
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    actualizarContadorCarrito(); // 🔥 IMPORTANTE
+
+    alert(nombre + " agregado al carrito 🛒");
+}
+</script>
+
+<script>
+function actualizarContadorCarrito() {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    document.getElementById("contador-carrito").textContent = carrito.length;
+}
+
+// Ejecutar al cargar
+actualizarContadorCarrito();
+</script>
+
+</body>
+</html>

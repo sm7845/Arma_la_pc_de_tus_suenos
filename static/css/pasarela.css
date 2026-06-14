@@ -1,0 +1,240 @@
+/* ===== RESET BÁSICO ===== */
+
+/* ===== NAVBAR ===== */
+
+nav {
+    background-color: #0a0a0a;
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+/* HOVER LINKS */
+nav a:hover {
+    color: #ff9900;
+}
+
+/* CARRITO (lado derecho) */
+nav ul li:last-child {
+    margin-left: auto;
+    font-size: 18px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== LAYOUT GENERAL ===== */
+
+.checkout {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== FORMULARIO (IZQUIERDA) ===== */
+
+.checkout-form {
+    flex: 2;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.checkout-form h2 {
+    margin-bottom: 15px;
+}
+
+.checkout-form h3 {
+    margin: 15px 0 10px;
+    font-size: 16px;
+}
+
+/* ===== INPUTS MODERNOS ===== */
+
+.checkout-form input {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 14px 12px;
+    border-radius: 12px;
+    border: 1.5px solid #ddd;
+    font-size: 15px;
+    background: #fafafa;
+    transition: all 0.25s ease;
+    outline: none;
+}
+
+/* Hover */
+.checkout-form input:hover {
+    border-color: #bbb;
+    background: #fff;
+}
+
+/* Focus PRO */
+.checkout-form input:focus {
+    border-color: #ff9900;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(255,153,0,0.2);
+}
+
+/* Placeholder */
+.checkout-form input::placeholder {
+    color: #999;
+}
+
+/* ===== MÉTODOS DE PAGO ===== */
+
+.metodos {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.metodo {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    background: #fafafa;
+    transition: 0.25s;
+}
+
+.metodo:hover {
+    border-color: #ff9900;
+    background: #fff3e0;
+}
+
+.metodo input {
+    display: none;
+}
+
+.metodo:has(input:checked) {
+    border-color: #ff9900;
+    background: #ffe0b2;
+    font-weight: bold;
+}
+
+/* ===== TARJETA ===== */
+
+#datos-tarjeta {
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #f4f8fb;
+    border: 1px solid #d6eaff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: fadeIn 0.3s ease;
+}
+
+#datos-tarjeta input {
+    background: #f7faff;
+    border: 1.5px solid #cfe3ff;
+}
+
+#datos-tarjeta input:focus {
+    border-color: #3399ff;
+    box-shadow: 0 0 0 3px rgba(51,153,255,0.2);
+}
+
+/* ===== BOTÓN ===== */
+
+.btn-pagar {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background: #ff9900;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-pagar:hover {
+    background: #e68a00;
+    transform: scale(1.03);
+}
+
+/* ===== RESUMEN (DERECHA) ===== */
+
+.checkout-resumen {
+    flex: 1;
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.checkout-resumen h2 {
+    margin-bottom: 10px;
+}
+
+.checkout-resumen hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+/* ===== PRODUCTOS ===== */
+
+#lista-productos div {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+#lista-productos div span:last-child {
+    font-weight: bold;
+}
+
+/* ===== ANIMACIONES ===== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE (IMPORTANTE) ===== */
+
+@media (max-width: 768px) {
+    .checkout {
+        flex-direction: column;
+        padding: 20px;
+    }
+}

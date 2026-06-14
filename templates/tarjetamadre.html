@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona Componentes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/compra.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="para_que.html">Guía paso a paso</a></li>
+            <li><a href="componentes.html">Consigue tus componentes!!</a></li>
+
+            <!-- Carrito -->
+            <li style="margin-left:auto;">
+                <a href="carrito.html">
+                    🛒 <span id="contador-carrito">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Selecciona tu gama</h1>
+        <p>Elige una categoría para ver los componentes recomendados.</p>
+    </section>
+
+    <div class="selector">
+        <select onchange="mostrarGama(this.value)">
+            <option value="">Selecciona una opción</option>
+            <option value="baja">Gama baja</option>
+            <option value="media">Gama media</option>
+            <option value="alta">Gama alta</option>
+        </select>
+    </div>
+
+    <div id="baja" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/madre1.jpg') }}" alt="Madre">
+
+    <div class="titulo-card">
+        <h3>Gigabyte A520M K V2 Micro-ATX</h3>
+    </div>
+
+    <p>$800 MXN</p>
+
+    <button onclick="agregarAlCarrito('Gigabyte A520M K V2 Micro-ATX', 800)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/madre2.jpg') }}" alt="Madre">
+
+    <div class="titulo-card">
+        <h3>Asus Tarjeta Madre Prime A520M-K AM4</h3>
+    </div>
+
+    <p>$860 MXN</p>
+
+    <button onclick="agregarAlCarrito('Asus Tarjeta Madre Prime A520M-K AM4', 860)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/madre3.webp') }}" alt="Madre">
+
+    <div class="titulo-card">
+        <h3>Tarjeta Madre MSI A520M-A PRO AM4</h3>
+    </div>
+
+    <p>$945 MXN</p>
+
+    <button onclick="agregarAlCarrito('Tarjeta Madre MSI A520M-A PRO AM4', 945)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+       <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/madre4.webp') }}" alt="Madre">
+
+    <div class="titulo-card">
+        <h3>MSI A320M PRO-E AMD A320 Enchufe AM4 Micro ATX</h3>
+    </div>
+
+    <p>$1,200 MXN</p>
+
+    <button onclick="agregarAlCarrito('MSI A320M PRO-E AMD A320 Enchufe AM4 Micro ATX', 1200)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/madre5.jpg') }}" alt="Madre">
+
+    <div class="titulo-card">
+        <h3>ASUS PRIME A520M-A II/CSM AM4 Micro ATX</h3>
+    </div>
+
+    <p>$1,070 MXN</p>
+
+    <button onclick="agregarAlCarrito('ASUS PRIME A520M-A II/CSM AM4 Micro ATX', 1070)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="media" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/madre6.webp') }}" alt="Madre">
+
+    <div class="titulo-card">
+        <h3>ASUS TUF GAMING B650M-PLUS WIFI AM5</h3>
+    </div>
+
+    <p>$2,750 MXN</p>
+
+    <button onclick="agregarAlCarrito('ASUS TUF GAMING B650M-PLUS WIFI AM5', 2750)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/madre7.jpg') }}" alt="Madre">
+
+    <div class="titulo-card">
+        <h3>MSI B760 Gaming Plus WiFi</h3>
+    </div>
+
+    <p>$2,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('MSI B760 Gaming Plus WiFi', 2500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/madre8.jpg') }}" alt="Madre">
+
+    <div class="titulo-card">
+        <h3>MSI B760M Gaming Plus WiFi DDR5</h3>
+    </div>
+
+    <p>$2,700 MXN</p>
+
+    <button onclick="agregarAlCarrito('MSI B760M Gaming Plus WiFi DDR5', 2700)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/madre9.jpg') }}" alt="Madre">
+
+    <div class="titulo-card">
+        <h3>ASRock B760M Pro RS</h3>
+    </div>
+
+    <p>$2,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('ASRock B760M Pro RS', 2500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/madre10.jpg') }}" alt="Madre">
+
+    <div class="titulo-card">
+        <h3>Gigabyte B650 Gaming X AX</h3>
+    </div>
+
+    <p>$4,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Gigabyte B650 Gaming X AX', 4000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="alta" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/madre11.jpg') }}" alt="Madre">
+
+    <div class="titulo-card">
+        <h3>MSI MAG X870 Tomahawk WIFI</h3>
+    </div>
+
+    <p>$5,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('MSI MAG X870 Tomahawk WIFI', 5000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/madre12.webp') }}" alt="Madre">
+
+    <div class="titulo-card">
+        <h3>MSI MAG B650 Tom ahawk WIFI</h3>
+    </div>
+
+    <p>$4,800 MXN</p>
+
+    <button onclick="agregarAlCarrito('MSI MAG B650 Tom ahawk WIFI', 4800)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/madre13.avif') }}" alt="Madre">
+
+    <div class="titulo-card">
+        <h3>MSI MAG Z790 TOMAHAWK WIFI</h3>
+    </div>
+
+    <p>$4,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('MSI MAG Z790 TOMAHAWK WIFI', 4000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/madre14.jpg') }}" alt="Madre">
+
+    <div class="titulo-card">
+        <h3>ASRock B650 Steel Legend WiFi</h3>
+    </div>
+
+    <p>$3,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('ASRock B650 Steel Legend WiFi', 3500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/madre15.jpg') }}" alt="Madre">
+
+    <div class="titulo-card">
+        <h3>ASUS TUF GAMING B650-PLUS WIFI</h3>
+    </div>
+    
+    <p>$3,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('ASUS TUF GAMING B650-PLUS WIFI', 3500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+    <script>
+        function mostrarGama(gama) {
+            document.getElementById("baja").style.display = "none";
+            document.getElementById("media").style.display = "none";
+            document.getElementById("alta").style.display = "none";
+
+            if (gama !== "") {
+                document.getElementById(gama).style.display = "grid";
+            }
+        }
+    </script>
+
+<script>
+function agregarAlCarrito(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    carrito.push({ nombre, precio });
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    actualizarContadorCarrito(); // 🔥 IMPORTANTE
+
+    alert(nombre + " agregado al carrito 🛒");
+}
+</script>
+
+<script>
+function actualizarContadorCarrito() {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    document.getElementById("contador-carrito").textContent = carrito.length;
+}
+
+// Ejecutar al cargar
+actualizarContadorCarrito();
+</script>
+
+</body>
+</html>

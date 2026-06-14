@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona Componentes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/compra.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="para_que.html">Guía paso a paso</a></li>
+            <li><a href="componentes.html">Consigue tus componentes!!</a></li>
+
+            <!-- Carrito -->
+            <li style="margin-left:auto;">
+                <a href="carrito.html">
+                    🛒 <span id="contador-carrito">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Selecciona tu gama</h1>
+        <p>Elige una categoría para ver los componentes recomendados.</p>
+    </section>
+
+    <div class="selector">
+        <select onchange="mostrarGama(this.value)">
+            <option value="">Selecciona una opción</option>
+            <option value="baja">Gama baja</option>
+            <option value="media">Gama media</option>
+            <option value="alta">Gama alta</option>
+        </select>
+    </div>
+
+    <div id="baja" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/teclado1.jpg') }}" alt="Teclado">
+
+    <div class="titulo-card">
+        <h3>Logitech K120</h3>
+    </div>
+
+    <p>$270 MXN</p>
+
+    <button onclick="agregarAlCarrito('Logitech K120', 270)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/teclado2.jpg') }}" alt="Teclado">
+
+    <div class="titulo-card">
+        <h3>Microsoft Wired Keyboard 600</h3>
+    </div>
+
+    <p>$370 MXN</p>
+
+    <button onclick="agregarAlCarrito('Microsoft Wired Keyboard 600', 370)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/teclado3.jpg') }}" alt="Teclado">
+
+    <div class="titulo-card">
+        <h3>Redragon Karura K502</h3>
+    </div>
+
+    <p>$735 MXN</p>
+
+    <button onclick="agregarAlCarrito('Redragon Karura K502', 735)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+       <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/teclado4.jpg') }}" alt="Teclado">
+
+    <div class="titulo-card">
+        <h3>Genius KB-118</h3>
+    </div>
+
+    <p>$400 MXN</p>
+
+    <button onclick="agregarAlCarrito('Genius KB-118', 400)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/teclado5.jpg') }}" alt="Teclado">
+
+    <div class="titulo-card">
+        <h3>HP 125 Wired Keyboard</h3>
+    </div>
+
+    <p>$415 MXN</p>
+
+    <button onclick="agregarAlCarrito('HP 125 Wired Keyboard', 415)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="media" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/teclado6.jpg') }}" alt="Teclado">
+
+    <div class="titulo-card">
+        <h3>Redragon Kumara K552</h3>
+    </div>
+
+    <p>$1,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Redragon Kumara K552', 1000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/teclado7.jpg') }}" alt="Teclado">
+
+    <div class="titulo-card">
+        <h3>Logitech G213 Prodigy</h3>
+    </div>
+
+    <p>$900 MXN</p>
+
+    <button onclick="agregarAlCarrito('Logitech G213 Prodigy', 900)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/teclado8.jpg') }}" alt="Teclado">
+
+    <div class="titulo-card">
+        <h3>HyperX Alloy Core RGB</h3>
+    </div>
+
+    <p>$950 MXN</p>
+
+    <button onclick="agregarAlCarrito('HyperX Alloy Core RGB', 950)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/teclado9.jpg') }}" alt="Teclado">
+
+    <div class="titulo-card">
+        <h3>Corsair K55 RGB Pro</h3>
+    </div>
+
+    <p>$1,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Corsair K55 RGB Pro', 1000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/teclado10.jpg') }}" alt="Teclado">
+
+    <div class="titulo-card">
+        <h3>Razer Ornata V3</h3>
+    </div>
+
+    <p>$1,200 MXN</p>
+
+    <button onclick="agregarAlCarrito('Razer Ornata V3', 1200)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="alta" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/teclado11.jpg') }}" alt="Teclado">
+
+    <div class="titulo-card">
+        <h3>Logitech G915 TKL</h3>
+    </div>
+
+    <p>$2,300 MXN</p>
+
+    <button onclick="agregarAlCarrito('Logitech G915 TKL', 2300)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/teclado12.jpg') }}" alt="Teclado">
+
+    <div class="titulo-card">
+        <h3>Razer Huntsman V3 Pro</h3>
+    </div>
+
+    <p>$3,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Razer Huntsman V3 Pro', 3000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/teclado13.jpg') }}" alt="Teclado">
+
+    <div class="titulo-card">
+        <h3>SteelSeries Apex Pro</h3>
+    </div>
+
+    <p>$4,300 MXN</p>
+
+    <button onclick="agregarAlCarrito('SteelSeries Apex Pro', 4300)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/teclado14.jpg') }}" alt="Teclado">
+
+    <div class="titulo-card">
+        <h3>Corsair K100 RGB</h3>
+    </div>
+
+    <p>$3,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Corsair K100 RGB', 3500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/teclado15.jpg') }}" alt="Teclado">
+
+    <div class="titulo-card">
+        <h3>ASUS ROG Azoth</h3>
+    </div>
+
+    <p>$4,800 MXN</p>
+
+    <button onclick="agregarAlCarrito('ASUS ROG Azoth', 4800)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    <script>
+        function mostrarGama(gama) {
+            document.getElementById("baja").style.display = "none";
+            document.getElementById("media").style.display = "none";
+            document.getElementById("alta").style.display = "none";
+
+            if (gama !== "") {
+                document.getElementById(gama).style.display = "grid";
+            }
+        }
+    </script>
+
+<script>
+function agregarAlCarrito(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    carrito.push({ nombre, precio });
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    actualizarContadorCarrito(); // 🔥 IMPORTANTE
+
+    alert(nombre + " agregado al carrito 🛒");
+}
+</script>
+
+<script>
+function actualizarContadorCarrito() {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    document.getElementById("contador-carrito").textContent = carrito.length;
+}
+
+// Ejecutar al cargar
+actualizarContadorCarrito();
+</script>
+
+</body>
+</html>

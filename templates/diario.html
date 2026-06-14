@@ -1,0 +1,974 @@
+    <!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Uso Diario | Componentes Recomendados</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/recomendaciones.css') }}">
+    </head>
+
+    <body>
+
+        <!-- ===================== NAVBAR ===================== -->
+
+        <nav>
+            <ul>
+
+                <li><a href="/">Inicio</a></li>
+                <li><a href="para_que.html">Guía paso a paso</a></li>
+                <li><a href="componentes.html">Consigue tus componentes!!</a></li>
+
+                <li style="margin-left:auto;">
+                    <a href="carrito.html">
+                        🛒 <span id="contador-carrito">0</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+        <!-- ===================== NAVBAR DE COMPONENTES ===================== -->
+
+        <nav class="navbar-componentes">
+
+          <a href="#procesadores">🖥 Procesadores</a>
+
+          <a href="#ram">🧠 RAM</a>
+
+          <a href="#ssd">💾 SSD</a>
+
+          <a href="#motherboards">🧩 Motherboard</a>
+
+          <a href="#fuentes">⚡ Fuente</a>
+
+          <a href="#graficas">🎮 Gráfica</a>
+
+          <a href="#configuracion">⭐ Configuración</a>
+
+          <a href="#usos">✅ Usos</a>
+
+        </nav>
+
+        <!-- ===================== HERO ===================== -->
+
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <span class="etiqueta">Uso Diario</span>
+
+                <h1>
+                    Componentes recomendados para una PC de uso diario
+                </h1>
+
+                <p>
+                    Encuentra una selección de componentes ideales para navegar por internet,
+                    trabajar con Office, estudiar, consumir contenido multimedia y realizar
+                    tareas cotidianas con un excelente rendimiento.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== CONFIGURACIÓN ===================== -->
+
+        <section class="configuracion">
+
+            <h2>⭐ Configuración recomendada</h2>
+
+            <div class="config-grid">
+
+                <div class="config-item">
+                    <h4>Procesador</h4>
+                    <p>Ryzen 5 5600G</p>
+                </div>
+
+                <div class="config-item">
+                    <h4>Memoria RAM</h4>
+                    <p>16 GB DDR4</p>
+                </div>
+
+                <div class="config-item">
+                    <h4>SSD</h4>
+                    <p>500 GB NVMe</p>
+                </div>
+
+                <div class="config-item">
+                    <h4>Motherboard</h4>
+                    <p>Gigabyte A520M</p>
+                </div>
+
+                <div class="config-item">
+                    <h4>Fuente</h4>
+                    <p>Corsair CX550</p>
+                </div>
+
+                <div class="config-item">
+                    <h4>Gráficos</h4>
+                    <p>Integrados</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== PROCESADORES ===================== -->
+
+        <section id="procesadores" class="categoria">
+
+            <div class="titulo-seccion">
+
+                <h2>🖥 Procesadores</h2>
+
+                <p>
+                    El cerebro de la computadora. Determina el rendimiento general del equipo.
+                </p>
+
+            </div>
+
+            <div class="grid-componentes">
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/ryzen.jpg') }}" alt="Procesador">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+                            ⭐ Recomendado
+                        </span>
+
+                        <h3>AMD Ryzen 5 5600G</h3>
+
+                        <div class="specs">
+
+                            <span>6 Núcleos</span>
+                            <span>Gráficos Integrados</span>
+                            <span>65W</span>
+
+                        </div>
+
+                        <p>
+
+                            No necesita gráfica<br>
+                            Excelente multitarea<br>
+                            Muy recomendado para estudiantes<br>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/intel.jpg') }}" alt="Procesador">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+                            🔥 Calidad / Precio
+                        </span>
+
+                        <h3>Intel Core i5-12400</h3>
+
+                        <div class="specs">
+
+                            <span>6 Núcleos</span>
+                            <span>Intel UHD</span>
+                            <span>65W</span>
+
+                        </div>
+
+                        <p>
+
+                            Muy rápido<br>
+                            Excelente productividad<br>
+                            Gráficos integrados<br>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/amd.jpg') }}" alt="Procesador">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+                            💰 Económico
+                        </span>
+
+                        <h3>AMD Ryzen 3 5300G</h3>
+
+                        <div class="specs">
+
+                            <span>4 Núcleos</span>
+                            <span>Radeon Graphics</span>
+                            <span>65W</span>
+
+                        </div>
+
+                        <p>
+
+                            Muy bueno para tareas diarias<br>
+                            Bajo consumo<br>
+                            Económico<br>
+
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== MEMORIAS RAM ===================== -->
+
+        <section id="ram" class="categoria">
+
+            <div class="titulo-seccion">
+
+                <h2>🧠 Memorias RAM</h2>
+
+                <p>
+                    La memoria RAM permite ejecutar varias aplicaciones al mismo tiempo
+                    de forma fluida.
+                </p>
+
+            </div>
+
+            <div class="grid-componentes">
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/kingston.jpg') }}" alt="Kingston Fury">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+                            ⭐ Más recomendada
+                        </span>
+
+                        <h3>Kingston Fury Beast</h3>
+
+                        <div class="specs">
+
+                            <span>16 GB</span>
+                            <span>3200 MHz</span>
+                            <span>DDR4</span>
+
+                        </div>
+
+                        <p>
+
+                        Muy compatible con Ryzen e Intel<br>
+                        Excelente para multitarea<br>
+
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/gammix.jpg') }}" alt="XPG">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+                            🔥 Calidad / Precio
+                        </span>
+
+                        <h3>XPG Gammix D35</h3>
+
+                        <div class="specs">
+
+                            <span>16 GB</span>
+                            <span>3200 MHz</span>
+                            <span>DDR4</span>
+
+                        </div>
+
+                        <p>
+
+                            Buena velocidad
+                            Diseño moderno
+                            Muy estable
+
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/vengance.jpg') }}" alt="Corsair">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+
+                            💎 Premium
+
+                        </span>
+
+                        <h3>Corsair Vengeance LPX</h3>
+
+                        <div class="specs">
+
+                            <span>16 GB</span>
+                            <span>3200 MHz</span>
+                            <span>DDR4</span>
+
+                        </div>
+
+                        <p>
+
+                            Excelente rendimiento
+                            Muy confiable
+                            Diseño clásico
+                            Buena para futuras upgrades
+                            Muy confiable
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== SSD ===================== -->
+
+        <section id="ssd" class="categoria">
+
+            <div class="titulo-seccion">
+
+                <h2>💾 Unidades SSD</h2>
+
+                <p>
+                    Un SSD mejora considerablemente la velocidad de inicio del sistema
+                    y la carga de programas.
+                </p>
+
+            </div>
+
+            <div class="grid-componentes">
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/ssd.jpg') }}" alt="Kingston NV2">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+
+                            ⭐ Recomendado
+
+                        </span>
+
+                        <h3>Kingston NV2</h3>
+
+                        <div class="specs">
+
+                            <span>500 GB</span>
+                            <span>NVMe</span>
+                            <span>PCIe 4.0</span>
+
+                        </div>
+
+                        <p>
+
+                            Muy rápido
+                            Bueno para Windows y programas
+                            Excelente precio
+                            Muy recomendado
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/blue.jpg') }}" alt="WD Blue">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+
+                            🔥 Alta velocidad
+
+                        </span>
+
+                        <h3>WD Blue SN580</h3>
+
+                        <div class="specs">
+
+                            <span>1 TB</span>
+                            <span>NVMe</span>
+                            <span>PCIe 4.0</span>
+
+                        </div>
+
+                        <p>
+
+                            Excelente velocidad
+                            Muy durable
+                            Perfecto para guardar archivos y programas
+                            Calidad premium
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/pro.jpg') }}" alt="Samsung 980">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+
+                            💎 Premium
+
+                        </span>
+
+                        <h3>Samsung 980 NVMe</h3>
+
+                        <div class="specs">
+
+                            <span>1 TB</span>
+                            <span>NVMe</span>
+                            <span>PCIe 4.0</span>
+
+                        </div>
+
+                        <p>
+
+                            Muy rápido
+                            Excelente estabilidad
+                            Muy popular
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+            <!-- ===================== TARJETAS MADRE ===================== -->
+
+        <section id="motherboards" class="categoria"></section>
+
+            <div class="titulo-seccion">
+
+                <h2>🧩 Tarjetas Madre</h2>
+
+                <p>
+                    La motherboard conecta todos los componentes del equipo y permite futuras actualizaciones.
+                </p>
+
+            </div>
+
+            <div class="grid-componentes">
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/a520.jpg') }}" alt="Gigabyte A520M">
+
+                    <div class="card-body">
+
+                        <span class="badge">⭐ Recomendada</span>
+
+                        <h3>Gigabyte A520M K V2</h3>
+
+                        <div class="specs">
+
+                            <span>Socket AM4</span>
+                            <span>M.2 NVMe</span>
+                            <span>HDMI</span>
+
+                        </div>
+
+                        <p>
+
+                            Ideal para Ryzen
+                            Mejor calidad-precio
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/msi.jpg') }}" alt="MSI">
+
+                    <div class="card-body">
+
+                        <span class="badge">🔥 Calidad / Precio</span>
+
+                        <h3>MSI PRO B550M-P</h3>
+
+                        <div class="specs">
+
+                            <span>B550</span>
+                            <span>PCIe 4.0</span>
+                            <span>M.2</span>
+
+                        </div>
+
+                        <p>
+
+                            Muy estable
+                            Mejor soporte futuro
+                            Excelente para upgrades
+                            Muy confiable
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/prime.jpg') }}" alt="ASUS">
+
+                    <div class="card-body">
+
+                        <span class="badge">💎 Premium</span>
+
+                        <h3>ASUS Prime A520M-E</h3>
+
+                        <div class="specs">
+
+                            <span>AM4</span>
+                            <span>DDR4</span>
+                            <span>M.2</span>
+
+                        </div>
+
+                        <p>
+
+                            Buena calidad
+                            Compatible con Ryzen
+                            Muy durable
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== FUENTES ===================== -->
+
+        <section id="fuentes" class="categoria"></section>
+
+            <div class="titulo-seccion">
+
+                <h2>⚡ Fuentes de Poder</h2>
+
+                <p>
+                    Una buena fuente garantiza estabilidad y protege los demás componentes del equipo.
+                </p>
+
+            </div>
+
+            <div class="grid-componentes">
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/fuentediario.jpg') }}" alt="Gigabyte">
+
+                    <div class="card-body">
+
+                        <span class="badge">💰 Económica</span>
+
+                        <h3>Gigabyte P450B</h3>
+
+                        <div class="specs">
+
+                            <span>450W</span>
+
+                            <span>80 Plus Bronze</span>
+
+                            <span>Silenciosa</span>
+
+                        </div>
+
+                        <p>
+
+                            Certificación 80 Plus Bronze
+                            Ideal para PCs sin tarjeta gráfica
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/corsair.jpg') }}" alt="Corsair">
+
+                    <div class="card-body">
+
+                        <span class="badge">⭐ Recomendada</span>
+
+                        <h3>Corsair CX550</h3>
+
+                        <div class="specs">
+
+                            <span>550W</span>
+
+                            <span>80 Plus Bronze</span>
+
+                            <span>Muy confiable</span>
+
+                        </div>
+
+                        <p>
+
+                            Muy silenciosa
+                            Excelente durabilidad
+                            Buena si luego quieres mejorar la PC
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/xpg.jpg') }}" alt="XPG">
+
+                    <div class="card-body">
+
+                        <span class="badge">🔥 Mejor calidad</span>
+
+                        <h3>XPG Pylon 550W</h3>
+
+                        <div class="specs">
+
+                            <span>550W</span>
+
+                            <span>80 Plus Bronze</span>
+
+                            <span>Protecciones</span>
+
+                        </div>
+
+                        <p>
+
+                            Muy estable
+                            Buena refrigeración
+                            Protección contra sobrecargas
+                            Excelente calidad-precio
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== TARJETA GRÁFICA ===================== -->
+
+        <section id="graficas" class="categoria">
+
+            <div class="titulo-seccion">
+
+                <h2>🎮 Tarjeta Gráfica</h2>
+
+                <p>
+
+                    Aunque una PC de uso diario no necesita una GPU dedicada, aquí tienes una opción si también deseas jugar ocasionalmente.
+
+                </p>
+
+            </div>
+
+            <div class="grid-componentes">
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/gtx.jpg') }}" alt="GTX 1650">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+
+                            ⭐ Opcional
+
+                        </span>
+
+                        <h3>GeForce GTX 1650</h3>
+
+                        <div class="specs">
+
+                            <span>4 GB GDDR6</span>
+
+                            <span>Bajo consumo</span>
+
+                            <span>1080p</span>
+
+                        </div>
+
+                        <p>
+
+                            Muy eficiente
+                            Buena para juegos y estudio
+                            Muy popular
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== CONFIGURACIÓN FINAL ===================== -->
+
+        <section id="configuracion" class="configuracion-final">
+
+            <div class="titulo-seccion">
+
+                <h2>🖥 Configuración Recomendada</h2>
+
+                <p>
+                    Esta es una configuración equilibrada para una computadora de uso diario.
+                    Puedes modificar cualquier componente según tu presupuesto.
+                </p>
+
+            </div>
+
+            <div class="tabla-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Componente</th>
+                            <th>Recomendación</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Procesador</td>
+                            <td>AMD Ryzen 5 5600G</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Memoria RAM</td>
+                            <td>16 GB DDR4</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>SSD</td>
+                            <td>Kingston NV2 500 GB</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Tarjeta Madre</td>
+                            <td>Gigabyte A520M K V2</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Fuente</td>
+                            <td>Corsair CX550</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Tarjeta Gráfica</td>
+                            <td>No necesaria (Opcional GTX 1650)</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== USOS ===================== -->
+
+        <section id="usos" class="usos">
+
+            <div class="titulo-seccion">
+
+                <h2>✅ Esta computadora es ideal para:</h2>
+
+            </div>
+
+            <div class="grid-usos">
+
+                <div class="uso-card">
+                    📄
+                    <h3>Office</h3>
+                </div>
+
+                <div class="uso-card">
+                    🌐
+                    <h3>Navegar por Internet</h3>
+                </div>
+
+                <div class="uso-card">
+                    🎓
+                    <h3>Clases Virtuales</h3>
+                </div>
+
+                <div class="uso-card">
+                    💻
+                    <h3>Programación</h3>
+                </div>
+
+                <div class="uso-card">
+                    🎬
+                    <h3>YouTube y Streaming</h3>
+                </div>
+
+                <div class="uso-card">
+                    💬
+                    <h3>Discord</h3>
+                </div>
+
+                <div class="uso-card">
+                    🎮
+                    <h3>Juegos Ligeros</h3>
+                </div>
+
+                <div class="uso-card">
+                    📚
+                    <h3>Estudio</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== FOOTER ===================== -->
+
+        <footer>
+
+            <div class="footer-contenido">
+
+                <h3>Proyecto Armado de PC</h3>
+
+                <p>
+                    Encuentra la mejor configuración para tus necesidades y aprende
+                    a elegir correctamente cada componente.
+                </p>
+
+                <p class="copyright">
+
+                    © 2026 - Todos los derechos reservados.
+
+                </p>
+
+            </div>
+
+        </footer>
+
+        <!-- ===================== SCRIPT CARRITO ===================== -->
+
+        <script>
+
+            function actualizarContadorCarrito() {
+
+                let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+                document.getElementById("contador-carrito").textContent = carrito.length;
+
+            }
+
+            actualizarContadorCarrito();
+
+        </script>
+
+    </body>
+
+    </html>    

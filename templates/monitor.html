@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona Componentes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/compra.css') }}">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="para_que.html">Guía paso a paso</a></li>
+            <li><a href="componentes.html">Consigue tus componentes!!</a></li>
+
+            <!-- Carrito -->
+            <li style="margin-left:auto;">
+                <a href="carrito.html">
+                    🛒 <span id="contador-carrito">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Selecciona tu gama</h1>
+        <p>Elige una categoría para ver los componentes recomendados.</p>
+    </section>
+
+    <div class="selector">
+        <select onchange="mostrarGama(this.value)">
+            <option value="">Selecciona una opción</option>
+            <option value="baja">Gama baja</option>
+            <option value="media">Gama media</option>
+            <option value="alta">Gama alta</option>
+        </select>
+    </div>
+
+    <div id="baja" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/monitor1.jpg') }}" alt="Monitor">
+
+    <div class="titulo-card">
+        <h3>LG 24U411A-B 24 Pulgadas</h3>
+    </div>
+
+    <p>$1,800 MXN</p>
+
+    <button onclick="agregarAlCarrito('LG 24U411A-B', 1800)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/monitor2.jpg') }}" alt="Monitor">
+
+    <div class="titulo-card">
+        <h3>Samsung Essential S3 LS24C310 (24 pulgadas)</h3>
+    </div>
+
+    <p>$1,600 MXN</p>
+
+    <button onclick="agregarAlCarrito('Samsung Essential S3 LS24C310 (24 pulgadas)', 1600)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/monitor3.jpg') }}" alt="Monitor">
+
+    <div class="titulo-card">
+        <h3>Dell SE2426HGS (24 pulgadas)</h3>
+    </div>
+
+    <p>$2,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Dell SE2426HGS (24 pulgadas)', 2000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+       <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/monitor4.jpg') }}" alt="Monitor">
+
+    <div class="titulo-card">
+        <h3>Xiaomi Gaming Monitor G27</h3>
+    </div>
+
+    <p>$2,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Xiaomi Gaming Monitor G27', 2500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/monitor5.jpg') }}" alt="Monitor">
+
+    <div class="titulo-card">
+        <h3>BenQ GW2480 (23.8 pulgadas)</h3>
+    </div>
+
+    <p>$2,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('BenQ GW2480 (23.8 pulgadas)', 2500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="media" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/monitor6.webp') }}" alt="Monitor">
+
+    <div class="titulo-card">
+        <h3>AOC Q27G3XMN (27 pulgadas)</h3>
+    </div>
+
+    <p>$3,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('AOC Q27G3XMN (27 pulgadas)', 3500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/monitor7.avif') }}" alt="Monitor">
+
+    <div class="titulo-card">
+        <h3>Samsung Odyssey G5 G55C (32 pulgadas)</h3>
+    </div>
+
+    <p>$6,100 MXN</p>
+
+    <button onclick="agregarAlCarrito('Samsung Odyssey G5 G55C (32 pulgadas)', 6100)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/monitor8.jpg') }}" alt="Monitor">
+
+    <div class="titulo-card">
+        <h3>Gigabyte GS27Q (27 pulgadas)</h3>
+    </div>
+
+    <p>$4,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Gigabyte GS27Q (27 pulgadas)', 4500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/monitor9.webp') }}" alt="Monitor">
+
+    <div class="titulo-card">
+        <h3>Asus TUF Gaming VG249QL3A (23.8 pulgadas)</h3>
+    </div>
+
+    <p>$5,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Asus TUF Gaming VG249QL3A (23.8 pulgadas)', 5500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/monitor10.avif') }}" alt="Monitor">
+
+    <div class="titulo-card">
+        <h3>LG UltraGear 27G610A-B (27 pulgadas)</h3>
+    </div>
+
+    <p>$4,500 MXN</p>   
+
+    <button onclick="agregarAlCarrito('LG UltraGear 27G610A-B (27 pulgadas)', 4500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="alta" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/monitor11.jpg') }}" alt="Monitor">
+
+    <div class="titulo-card">
+        <h3>ASUS ROG Swift OLED PG27UCDM (27 pulgadas)</h3>
+    </div>
+
+    <p>$15,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('ASUS ROG Swift OLED PG27UCDM (27 pulgadas)', 15500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/monitor12.jpg') }}" alt="Monitor">
+
+    <div class="titulo-card">
+        <h3>Samsung Odyssey OLED G8 G80SD (32 pulgadas)</h3>
+    </div>
+
+    <p>$20,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Samsung Odyssey OLED G8 G80SD (32 pulgadas)', 20500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/monitor13.jpg') }}" alt="Monitor">
+
+    <div class="titulo-card">
+        <h3>Alienware AW3225QF (31.6 pulgadas)</h3>
+    </div>
+
+    <p>$10,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Alienware AW3225QF (31.6 pulgadas)', 10500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/monitor14.webp') }}" alt="Monitor">
+
+    <div class="titulo-card">
+        <h3>Sony INZONE M10S (27 pulgadas)</h3>
+    </div>
+
+    <p>$15,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Sony INZONE M10S (27 pulgadas)', 15500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/monitor15.jpg') }}" alt="Monitor">
+
+    <div class="titulo-card">
+        <h3>LG UltraGear 45GX950A (45 pulgadas)</h3>
+    </div>
+
+    <p>$26,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('LG UltraGear 45GX950A (45 pulgadas)', 26500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    <script>
+        function mostrarGama(gama) {
+            document.getElementById("baja").style.display = "none";
+            document.getElementById("media").style.display = "none";
+            document.getElementById("alta").style.display = "none";
+
+            if (gama !== "") {
+                document.getElementById(gama).style.display = "grid";
+            }
+        }
+    </script>
+
+<script>
+function agregarAlCarrito(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    carrito.push({ nombre, precio });
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    actualizarContadorCarrito(); // 🔥 IMPORTANTE
+
+    alert(nombre + " agregado al carrito 🛒");
+}
+</script>
+
+<script>
+function actualizarContadorCarrito() {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    document.getElementById("contador-carrito").textContent = carrito.length;
+}
+
+// Ejecutar al cargar
+actualizarContadorCarrito();
+</script>
+
+</body>
+</html>

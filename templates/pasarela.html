@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasarela de Pago</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pasarela.css') }}">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="para_que.html">Guia paso a paso</a></li>
+            <li><a href="componentes.html">Consigue tus componentes!!</a></li>
+            
+            <li style="margin-left:auto;">
+                <a href="carrito.html">
+                    🛒 <span id="contador-carrito">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="checkout">
+
+    <!-- IZQUIERDA: FORMULARIO -->
+    <div class="checkout-form">
+
+        <h2>Datos de envío</h2>
+
+        <form onsubmit="procesarPago(event)">
+            
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+            <input type="text" id="direccion" placeholder="Dirección" required>
+            <input type="tel" id="telefono" placeholder="Teléfono" required>
+
+            <h3>Método de pago</h3>
+
+            <div class="metodos">
+                <label class="metodo">
+                    <input type="radio" name="metodo_pago" value="tarjeta" checked onchange="mostrarCamposPago()">
+                    💳 Tarjeta
+                </label>
+
+                <label class="metodo">
+                    <input type="radio" name="metodo_pago" value="efectivo" onchange="mostrarCamposPago()">
+                    💵 Efectivo
+                </label>
+            </div>
+
+            <div id="datos-tarjeta">
+                <input type="text" id="numero_tarjeta" placeholder="Número de tarjeta (16 dígitos)">
+                <input type="text" id="cvv" placeholder="CVV">
+                <input type="text" id="fecha" placeholder="MM/AA">
+            </div>
+
+            <button type="submit" class="btn-pagar">
+                Finalizar compra
+            </button>
+
+        </form>
+    </div>
+
+    <!-- DERECHA: RESUMEN -->
+    <div class="checkout-resumen">
+        <h2>Resumen de compra</h2>
+
+        <div id="lista-productos"></div>
+
+        <hr>
+
+        <p>Subtotal: <span id="subtotal">$0</span></p>
+        <p>Envío: <span>$0</span></p>
+
+        <h3>Total: <span id="total">$0</span></h3>
+    </div>
+
+    </section>
+
+    <script>
+    function actualizarContadorCarrito() {
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        document.getElementById("contador-carrito").textContent = carrito.length;
+    }
+
+    actualizarContadorCarrito();
+
+    function obtenerMetodoPago() {
+        let seleccionado = document.querySelector('input[name="metodo_pago"]:checked');
+        return seleccionado ? seleccionado.value : null;
+    }
+
+    function mostrarCamposPago() {
+        let metodo = obtenerMetodoPago();
+        let tarjetaDiv = document.getElementById("datos-tarjeta");
+
+        if (metodo === "tarjeta") {
+            tarjetaDiv.style.display = "block";
+        } else {
+            tarjetaDiv.style.display = "none";
+        }
+    }
+
+    // Ejecutar al cargar para que respete el seleccionado por defecto
+    window.onload = mostrarCamposPago;
+
+    function procesarPago(event) {
+        event.preventDefault();
+
+        let nombre = document.getElementById("nombre").value;
+        let direccion = document.getElementById("direccion").value;
+        let telefono = document.getElementById("telefono").value;
+        let metodo = obtenerMetodoPago();
+
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+        if (carrito.length === 0) {
+            alert("Tu carrito está vacío");
+            return;
+        }
+
+        if (!metodo) {
+            alert("Selecciona un método de pago");
+            return;
+        }
+
+        // VALIDACIÓN TARJETA (SIMULADA)
+        if (metodo === "tarjeta") {
+            let numero = document.getElementById("numero_tarjeta").value;
+            let cvv = document.getElementById("cvv").value;
+            let fecha = document.getElementById("fecha").value;
+
+            if (numero.length !== 16 || isNaN(numero)) {
+                alert("Número de tarjeta inválido");
+                return;
+            }
+
+            if (cvv.length !== 3 || isNaN(cvv)) {
+                alert("CVV inválido");
+                return;
+            }
+
+            if (!fecha.includes("/")) {
+                alert("Fecha inválida");
+                return;
+            }
+        }
+
+        let datos = {
+            cliente: {
+                nombre: nombre,
+                direccion: direccion,
+                telefono: telefono
+            },
+            carrito: carrito,
+            metodo_pago: metodo
+        };
+
+        fetch("/generar_ticket", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(datos)
+        })
+        .then(response => response.blob())
+        .then(blob => {
+            let url = window.URL.createObjectURL(blob);
+            let a = document.createElement("a");
+            a.href = url;
+            a.download = "ticket.pdf";
+            a.click();
+        });
+
+        localStorage.removeItem("carrito");
+
+// Pantalla tipo checkout pro
+document.body.innerHTML = `
+    <div style="
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        font-family:Arial;
+        text-align:center;
+    ">
+        <h1>✅ Compra completada</h1>
+        <p>Tu pedido está siendo procesado...</p>
+        <p>Redirigiendo al inicio...</p>
+    </div>
+`;
+
+// Redirigir después de 3 segundos
+setTimeout(() => {
+    window.location.href = "x.html";
+}, 3000);
+    }
+    function cargarResumen() {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    let lista = document.getElementById("lista-productos");
+
+    let subtotal = 0;
+    lista.innerHTML = "";
+
+    if (carrito.length === 0) {
+        lista.innerHTML = "<p>Tu carrito está vacío</p>";
+        document.getElementById("subtotal").textContent = "$0";
+        document.getElementById("total").textContent = "$0";
+        return;
+    }
+
+    carrito.forEach(p => {
+        let div = document.createElement("div");
+        div.style.display = "flex";
+        div.style.justifyContent = "space-between";
+        div.style.marginBottom = "8px";
+
+        div.innerHTML = `
+            <span>${p.nombre}</span>
+            <span>$${p.precio}</span>
+        `;
+
+        lista.appendChild(div);
+
+        subtotal += Number(p.precio);
+    });
+
+    document.getElementById("subtotal").textContent = "$" + subtotal;
+    document.getElementById("total").textContent = "$" + subtotal;
+}
+
+// Ejecutar al cargar
+cargarResumen();
+    </script>
+
+</body>
+</html>

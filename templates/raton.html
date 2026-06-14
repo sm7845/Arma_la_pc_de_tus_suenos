@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona Componentes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/compra.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="para_que.html">Guía paso a paso</a></li>
+            <li><a href="componentes.html">Consigue tus componentes!!</a></li>
+
+            <!-- Carrito -->
+            <li style="margin-left:auto;">
+                <a href="carrito.html">
+                    🛒 <span id="contador-carrito">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Selecciona tu gama</h1>
+        <p>Elige una categoría para ver los componentes recomendados.</p>
+    </section>
+
+    <div class="selector">
+        <select onchange="mostrarGama(this.value)">
+            <option value="">Selecciona una opción</option>
+            <option value="baja">Gama baja</option>
+            <option value="media">Gama media</option>
+            <option value="alta">Gama alta</option>
+        </select>
+    </div>
+
+    <div id="baja" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/raton1.jpg') }}" alt="Raton">
+
+    <div class="titulo-card">
+        <h3>Logitech M90</h3>
+    </div>
+
+    <p>$100 MXN</p>
+
+    <button onclick="agregarAlCarrito('Logitech M90', 100)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/raton2.jpg') }}" alt="Raton">
+
+    <div class="titulo-card">
+        <h3>Logitech M170</h3>
+    </div>
+
+    <p>$150 MXN</p>
+
+    <button onclick="agregarAlCarrito('Logitech M170', 150)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/raton3.jpg') }}" alt="Raton">
+
+    <div class="titulo-card">
+        <h3>HP 240 Bluetooth</h3>
+    </div>
+
+    <p>$200 MXN</p>
+
+    <button onclick="agregarAlCarrito('HP 240 Bluetooth', 200)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+       <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/raton4.jpg') }}" alt="Raton">
+
+    <div class="titulo-card">
+        <h3>Logitech G203 Lightsync</h3>
+    </div>
+
+    <p>$500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Logitech G203 Lightsync', 500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/raton5.jpg') }}" alt="Raton">
+
+    <div class="titulo-card">
+        <h3>Razer DeathAdder Essential</h3>
+    </div>
+
+    <p>$380 MXN</p>
+
+    <button onclick="agregarAlCarrito('Razer DeathAdder Essential', 380)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="media" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/raton6.jpg') }}" alt="Raton">
+
+    <div class="titulo-card">
+        <h3>Logitech G502 X</h3>
+    </div>
+
+    <p>$2,300 MXN</p>
+
+    <button onclick="agregarAlCarrito('Logitech G502 X', 2300)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/raton7.jpg') }}" alt="Raton">
+
+    <div class="titulo-card">
+        <h3>Razer Basilisk V3</h3>
+    </div>
+
+    <p>$1,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Razer Basilisk V3', 1000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/raton8.jpg') }}" alt="Raton">
+
+    <div class="titulo-card">
+        <h3>HyperX Pulsefire Haste 2</h3>
+    </div>
+
+    <p>$1,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('HyperX Pulsefire Haste 2', 1000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/raton9.jpg') }}" alt="Raton">
+
+    <div class="titulo-card">
+        <h3>SteelSeries Rival 5</h3>
+    </div>
+
+    <p>$1,300 MXN</p>
+
+    <button onclick="agregarAlCarrito('SteelSeries Rival 5', 1300)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/raton10.jpg') }}" alt="Raton">
+
+    <div class="titulo-card">
+        <h3>SteelSeries Aerox 5</h3>
+    </div>
+
+    <p>$2,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('SteelSeries Aerox 5', 2500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="alta" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/raton11.jpg') }}" alt="Raton">
+
+    <div class="titulo-card">
+        <h3>Logitech G Pro X Superlight 2</h3>
+    </div>
+
+    <p>$2,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Logitech G Pro X Superlight 2', 2500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/raton12.jpg') }}" alt="Raton">
+
+    <div class="titulo-card">
+        <h3>Razer Viper V3 Pro</h3>
+    </div>
+
+    <p>$2,800 MXN</p>
+
+    <button onclick="agregarAlCarrito('Razer Viper V3 Pro', 2800)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/raton13.jpg') }}" alt="Raton">
+
+    <div class="titulo-card">
+        <h3>Razer DeathAdder V3 Pro</h3>
+    </div>
+
+    <p>$3,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Razer DeathAdder V3 Pro', 3500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/raton14.jpg') }}" alt="Raton">
+
+    <div class="titulo-card">
+        <h3>Logitech G502 Lightspeed</h3>
+    </div>
+
+    <p>$3,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Logitech G502 Lightspeed', 3000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/raton15.jpg') }}" alt="Raton">
+
+    <div class="titulo-card">
+        <h3>Corsair M75 Wireless</h3>
+    </div>
+
+    <p>$3,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Corsair M75 Wireless', 3000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    <script>
+        function mostrarGama(gama) {
+            document.getElementById("baja").style.display = "none";
+            document.getElementById("media").style.display = "none";
+            document.getElementById("alta").style.display = "none";
+
+            if (gama !== "") {
+                document.getElementById(gama).style.display = "grid";
+            }
+        }
+    </script>
+
+<script>
+function agregarAlCarrito(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    carrito.push({ nombre, precio });
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    actualizarContadorCarrito(); // 🔥 IMPORTANTE
+
+    alert(nombre + " agregado al carrito 🛒");
+}
+</script>
+
+<script>
+function actualizarContadorCarrito() {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    document.getElementById("contador-carrito").textContent = carrito.length;
+}
+
+// Ejecutar al cargar
+actualizarContadorCarrito();
+</script>
+
+</body>
+</html>

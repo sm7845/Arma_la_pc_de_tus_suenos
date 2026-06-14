@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona Componentes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/compra.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="para_que.html">Guía paso a paso</a></li>
+            <li><a href="componentes.html">Consigue tus componentes!!</a></li>
+
+            <!-- Carrito -->
+            <li style="margin-left:auto;">
+                <a href="carrito.html">
+                    🛒 <span id="contador-carrito">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Selecciona tu gama</h1>
+        <p>Elige una categoría para ver los componentes recomendados.</p>
+    </section>
+
+    <div class="selector">
+        <select onchange="mostrarGama(this.value)">
+            <option value="">Selecciona una opción</option>
+            <option value="baja">Gama baja</option>
+            <option value="media">Gama media</option>
+            <option value="alta">Gama alta</option>
+        </select>
+    </div>
+
+    <div id="baja" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ssd1.jpg') }}" alt="SSD">
+
+    <div class="titulo-card">
+        <h3>Kingston A400</h3>
+    </div>
+
+    <p>$1,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Kingston A400', 1500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ssd2.jpg') }}" alt="ssd">
+
+    <div class="titulo-card">
+        <h3>Crucial BX500</h3>
+    </div>
+
+    <p>$4,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Crucial BX500', 4500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/crucial2.webp') }}" alt="ssd">
+
+    <div class="titulo-card">
+        <h3>Crucial P3</h3>
+    </div>
+
+    <p>$1,100 MXN</p>
+
+    <button onclick="agregarAlCarrito('Crucial P3', 1100)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+       <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ssd3.jpg') }}" alt="ssd">
+
+    <div class="titulo-card">
+        <h3>Kingston NV3</h3>
+    </div>
+
+    <p>$2,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Kingston NV3', 2000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ssd4.jpg') }}" alt="ssd">
+
+    <div class="titulo-card">
+        <h3>SanDisk SSD Plus</h3>
+    </div>
+
+    <p>$2,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('SanDisk SSD Plus', 2500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="media" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ssd5.webp') }}" alt="ssd">
+
+    <div class="titulo-card">
+        <h3>Crucial T500</h3>
+    </div>
+
+    <p>$6,100 MXN</p>
+
+    <button onclick="agregarAlCarrito('Crucial T500', 6100)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ssd6.webp') }}" alt="ssd">
+
+    <div class="titulo-card">
+        <h3>Lexar NM790</h3>
+    </div>
+
+    <p>$4,800 MXN</p>
+
+    <button onclick="agregarAlCarrito('Lexar NM790', 4800)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ssd7.webp') }}" alt="ssd">
+
+    <div class="titulo-card">
+        <h3>WD Black SN7100</h3>
+    </div>
+
+    <p>$1,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('WD Black SN7100', 1500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ssd8.webp') }}" alt="ssd">
+
+    <div class="titulo-card">
+        <h3>Samsung 990 EVO Plus</h3>
+    </div>
+
+    <p>$9,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Samsung 990 EVO Plus', 9000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ssd9.jpg') }}" alt="ssd">
+
+    <div class="titulo-card">
+        <h3>TeamGroup MP44Q</h3>
+    </div>
+
+    <p>$1,700 MXN</p>
+
+    <button onclick="agregarAlCarrito('TeamGroup MP44Q', 1700)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="alta" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ssd10.webp') }}" alt="ssd">
+
+    <div class="titulo-card">
+        <h3>Samsung 990 Pro</h3>
+    </div>
+
+    <p>1,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Samsung 990 Pro', 1500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ssd11.webp') }}" alt="ssd">
+
+    <div class="titulo-card">
+        <h3>WD Black SN850X</h3>
+    </div>
+
+    <p>$4,800 MXN</p>
+
+    <button onclick="agregarAlCarrito('WD Black SN850X', 4800)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ssd12.png') }}" alt="ssd">
+
+    <div class="titulo-card">
+        <h3>Kingston KC3000</h3>
+    </div>
+
+    <p>$3,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Kingston KC3000', 3500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ssd13.jpg') }}" alt="ssd">
+
+    <div class="titulo-card">
+        <h3>Crucial T705 (o T700)</h3>
+    </div>
+
+    <p>$7,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Crucial T705 (o T700)', 7000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ssd14.jpg') }}" alt="ssd">
+
+    <div class="titulo-card">
+        <h3>Samsung 9100 Pro</h3>
+    </div>
+
+    <p>$7,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Samsung 9100 Pro', 7500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    <script>
+        function mostrarGama(gama) {
+            document.getElementById("baja").style.display = "none";
+            document.getElementById("media").style.display = "none";
+            document.getElementById("alta").style.display = "none";
+
+            if (gama !== "") {
+                document.getElementById(gama).style.display = "grid";
+            }
+        }
+    </script>
+
+<script>
+function agregarAlCarrito(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    carrito.push({ nombre, precio });
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    actualizarContadorCarrito(); // 🔥 IMPORTANTE
+
+    alert(nombre + " agregado al carrito 🛒");
+}
+</script>
+
+<script>
+function actualizarContadorCarrito() {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    document.getElementById("contador-carrito").textContent = carrito.length;
+}
+
+// Ejecutar al cargar
+actualizarContadorCarrito();
+</script>
+
+</body>
+</html>

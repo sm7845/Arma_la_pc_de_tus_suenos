@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes para tu PC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/componentes.css') }}">
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="para_que.html">Guía paso a paso</a></li>
+        <li><a href="componentes.html">Consigue tus componentes!!</a></li>
+
+        <li style="margin-left:auto;">
+            <a href="carrito.html">
+                🛒 <span id="contador-carrito">0</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Componentes para tu PC</h1>
+    <p>Selecciona cualquier componente para conocer más información y comprarlo.</p>
+</section>
+
+<section class="grid-componentes">
+
+    <div class="card" onclick="window.location.href='ram.html'">
+        <img src="{{ url_for('static', filename='css/images/ram.jpg') }}" alt="RAM">
+        <div class="info">
+            <h3>Memoria RAM</h3>
+            <p>Mejora el rendimiento y la velocidad de tu computadora.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='fuente.html'">
+        <img src="{{ url_for('static', filename='css/images/fuentedepoder.jpg') }}" alt="Fuente">
+        <div class="info">
+            <h3>Fuente de Poder</h3>
+            <p>Suministra energía de forma segura a todos los componentes.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='monitor.html'">
+        <img src="{{ url_for('static', filename='css/images/monitor.jpg') }}" alt="Monitor">
+        <div class="info">
+            <h3>Monitor</h3>
+            <p>Disfruta imágenes con gran calidad y resolución.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='teclado.html'">
+        <img src="{{ url_for('static', filename='css/images/teclado.jpg') }}" alt="Teclado">
+        <div class="info">
+            <h3>Teclado</h3>
+            <p>Escribe y juega con mayor comodidad.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='raton.html'">
+        <img src="{{ url_for('static', filename='css/images/raton.jpg') }}" alt="Ratón">
+        <div class="info">
+            <h3>Ratón</h3>
+            <p>Precisión y comodidad para trabajar o jugar.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='procesador.html'">
+        <img src="{{ url_for('static', filename='css/images/procesador.jpg') }}" alt="Procesador">
+        <div class="info">
+            <h3>Procesador</h3>
+            <p>El cerebro de tu computadora.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='grafica.html'">
+        <img src="{{ url_for('static', filename='css/images/tarjeta.jpg') }}" alt="Gráfica">
+        <div class="info">
+            <h3>Tarjeta Gráfica</h3>
+            <p>Ideal para videojuegos, diseño y edición.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='caja.html'">
+        <img src="{{ url_for('static', filename='css/images/caja.jpg') }}" alt="Gabinete">
+        <div class="info">
+            <h3>Caja de PC</h3>
+            <p>Protege y organiza todos los componentes.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='ssd.html'">
+        <img src="{{ url_for('static', filename='css/images/memoria-ssd.jpg') }}" alt="SSD">
+        <div class="info">
+            <h3>Memoria SSD</h3>
+            <p>Arranque más rápido y mayor velocidad de carga.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='tarjetamadre.html'">
+        <img src="{{ url_for('static', filename='css/images/tarjetamadre.jpg') }}" alt="Tarjeta Madre">
+        <div class="info">
+            <h3>Tarjeta Madre</h3>
+            <p>Conecta todos los componentes de tu computadora.</p>
+        </div>
+    </div>
+
+</section>
+
+<script>
+function actualizarContadorCarrito(){
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    document.getElementById("contador-carrito").textContent = carrito.length;
+}
+
+actualizarContadorCarrito();
+</script>
+
+</body>
+</html>

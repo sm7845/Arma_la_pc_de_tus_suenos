@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona Componentes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/compra.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="para_que.html">Guía paso a paso</a></li>
+            <li><a href="componentes.html">Consigue tus componentes!!</a></li>
+
+            <!-- Carrito -->
+            <li style="margin-left:auto;">
+                <a href="carrito.html">
+                    🛒 <span id="contador-carrito">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Selecciona tu gama</h1>
+        <p>Elige una categoría para ver los componentes recomendados.</p>
+    </section>
+
+    <div class="selector">
+        <select onchange="mostrarGama(this.value)">
+            <option value="">Selecciona una opción</option>
+            <option value="baja">Gama baja</option>
+            <option value="media">Gama media</option>
+            <option value="alta">Gama alta</option>
+        </select>
+    </div>
+
+    <div id="baja" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/grafica1.jpg') }}" alt="Grafica">
+
+    <div class="titulo-card">
+        <h3>NVIDIA GeForce GT 1030 (2GB)</h3>
+    </div>
+
+    <p>$2,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('NVIDIA GeForce GT 1030 2GB', 2000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/grafica2.jpg') }}" alt="Grafica">
+
+    <div class="titulo-card">
+        <h3>AMD Radeon RX 580 (4GB)</h3>
+    </div>
+
+    <p>$1,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('AMD Radeon RX 580 4GB', 1500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/grafica3.jpg') }}" alt="Grafica">
+
+    <div class="titulo-card">
+        <h3>AMD Radeon RX 6400 (4GB)</h3>
+    </div>
+
+    <p>$3,200 MXN</p>
+
+    <button onclick="agregarAlCarrito('AMD Radeon RX 6400 4GB', 3200)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+       <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/grafica4.webp') }}" alt="Grafica">
+
+    <div class="titulo-card">
+        <h3>NVIDIA GeForce GTX 1650 (4GB)</h3>
+    </div>
+
+    <p>$4,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('NVIDIA GeForce GTX 1650 4GB', 4000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/grafica5.jpg') }}" alt="Grafica">
+
+    <div class="titulo-card">
+        <h3>AMD Radeon RX 6500 XT (4GB)</h3>
+    </div>
+
+    <p>$4,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('AMD Radeon RX 6500 XT 4GB', 4500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="media" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/grafica6.webp') }}" alt="Grafica">
+
+    <div class="titulo-card">
+        <h3>NVIDIA RTX 4060 Ti (8GB / 16GB)</h3>
+    </div>
+
+    <p>$9,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('NVIDIA RTX 4060 Ti 8GB / 16GB', 9500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/grafica7.jpg') }}" alt="Grafica">
+
+    <div class="titulo-card">
+        <h3>AMD Radeon RX 7700 XT (12GB)</h3>
+    </div>
+
+    <p>$9,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('AMD Radeon RX 7700 XT 12GB', 9000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/grafica8.jpg') }}" alt="Grafica">
+
+    <div class="titulo-card">
+        <h3>NVIDIA RTX 4070 (12GB)</h3>
+    </div>
+
+    <p>$10,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('NVIDIA RTX 4070 12GB', 10000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/grafica9.jpg') }}" alt="Grafica">
+
+    <div class="titulo-card">
+        <h3>AMD Radeon RX 7800 XT (16GB)</h3>
+    </div>
+
+    <p>$11,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('AMD Radeon RX 7800 XT 16GB', 11000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/grafica10.jpg') }}" alt="Grafica">
+
+    <div class="titulo-card">
+        <h3>Intel Arc A770 (16GB)</h3>
+    </div>
+
+    <p>$10,350 MXN</p>
+
+    <button onclick="agregarAlCarrito('Intel Arc A770 16GB', 10350)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="alta" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/grafica11.jpg') }}" alt="Grafica">
+
+    <div class="titulo-card">
+        <h3>NVIDIA RTX 4070 Ti Super (16GB)</h3>
+    </div>
+
+    <p>$14,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('NVIDIA RTX 4070 Ti Super 16GB', 14500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/grafica12.jpg') }}" alt="Grafica">
+
+    <div class="titulo-card">
+        <h3>AMD Radeon RX 7900 XT (20GB)</h3>
+    </div>
+
+    <p>$17,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('AMD Radeon RX 7900 XT 20GB', 17000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/grafica13.jpg') }}" alt="Grafica">
+
+    <div class="titulo-card">
+        <h3>NVIDIA RTX 4080 Super (16GB)</h3>
+    </div>
+
+    <p>$22,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('NVIDIA RTX 4080 Super 16GB', 22000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/grafica14.webp') }}" alt="Grafica">
+
+    <div class="titulo-card">
+        <h3>AMD Radeon RX 7900 XTX (24GB)</h3>
+    </div>
+
+    <p>$25,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('AMD Radeon RX 7900 XTX 24GB', 25000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/grafica15.jpg') }}" alt="Grafica">
+
+    <div class="titulo-card">
+        <h3>NVIDIA RTX 4090</h3>
+    </div>
+
+    <p>$40,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('NVIDIA RTX 4090', 40000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    <script>
+        function mostrarGama(gama) {
+            document.getElementById("baja").style.display = "none";
+            document.getElementById("media").style.display = "none";
+            document.getElementById("alta").style.display = "none";
+
+            if (gama !== "") {
+                document.getElementById(gama).style.display = "grid";
+            }
+        }
+    </script>
+
+<script>
+function agregarAlCarrito(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    carrito.push({ nombre, precio });
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    actualizarContadorCarrito(); // 🔥 IMPORTANTE
+
+    alert(nombre + " agregado al carrito 🛒");
+}
+</script>
+
+<script>
+function actualizarContadorCarrito() {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    document.getElementById("contador-carrito").textContent = carrito.length;
+}
+
+// Ejecutar al cargar
+actualizarContadorCarrito();
+</script>
+
+</body>
+</html>

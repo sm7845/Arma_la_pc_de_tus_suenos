@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona Componentes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/compra.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="para_que.html">Guía paso a paso</a></li>
+            <li><a href="componentes.html">Consigue tus componentes!!</a></li>
+
+            <!-- Carrito -->
+            <li style="margin-left:auto;">
+                <a href="carrito.html">
+                    🛒 <span id="contador-carrito">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Selecciona tu gama</h1>
+        <p>Elige una categoría para ver los componentes recomendados.</p>
+    </section>
+
+    <div class="selector">
+        <select onchange="mostrarGama(this.value)">
+            <option value="">Selecciona una opción</option>
+            <option value="baja">Gama baja</option>
+            <option value="media">Gama media</option>
+            <option value="alta">Gama alta</option>
+        </select>
+    </div>
+
+    <div id="baja" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/gabinete1.webp') }}" alt="Gabinete">
+
+    <div class="titulo-card">
+        <h3>Acteck Performance II</h3>
+    </div>
+
+    <p>$500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Acteck Performance II', 500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/gabinete2.webp') }}" alt="Gabinete">
+
+    <div class="titulo-card">
+        <h3>Quaroni QCMT-06</h3>
+    </div>
+
+    <p>$450 MXN</p>
+
+    <button onclick="agregarAlCarrito('Quaroni QCMT-06', 450)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/gabinete3.jpg') }}" alt="Gabinete">
+
+    <div class="titulo-card">
+        <h3>Quaroni QCMT-05</h3>
+    </div>
+
+    <p>$400 MXN</p>
+
+    <button onclick="agregarAlCarrito('Quaroni QCMT-05', 400)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+       <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/gabinete4.jpg') }}" alt="Gabinete">
+
+    <div class="titulo-card">
+        <h3>Balam Rush Artic GI725</h3>
+    </div>
+
+    <p>$800 MXN</p>
+
+    <button onclick="agregarAlCarrito('Balam Rush Artic GI725', 800)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/gabinete5.jpg') }}" alt="Gabinete">
+
+    <div class="titulo-card">
+        <h3>XPG Valor Air</h3>
+    </div>
+
+    <p>$1,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('XPG Valor Air', 1000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="media" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/gabinete6.webp') }}" alt="Gabinete">
+
+    <div class="titulo-card">
+        <h3>DeepCool CG530 4F</h3>
+    </div>
+
+    <p>$1,600 MXN</p>
+
+    <button onclick="agregarAlCarrito('DeepCool CG530 4F', 1600)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/gabinete7.webp') }}" alt="Gabinete">
+
+    <div class="titulo-card">
+        <h3>NZXT H3 Flow</h3>
+    </div>
+
+    <p>$1,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('NZXT H3 Flow', 1500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/gabinete8.jpg') }}" alt="Gabinete">
+
+    <div class="titulo-card">
+        <h3>Corsair 3000D RGB Airflow</h3>
+    </div>
+
+    <p>$2,200 MXN</p>
+
+    <button onclick="agregarAlCarrito('Corsair 3000D RGB Airflow', 2200)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/gabinete9.webp') }}" alt="Gabinete">
+
+    <div class="titulo-card">
+        <h3>DeepCool Morpheus</h3>
+    </div>
+
+    <p>$2,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('DeepCool Morpheus', 2500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/gabinete10.jpg') }}" alt="Gabinete">
+
+    <div class="titulo-card">
+        <h3>Antec C8 Curve Wood</h3>
+    </div>
+
+    <p>$3,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Antec C8 Curve Wood', 3000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="alta" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/gabinete11.jpg') }}" alt="Gabinete">
+
+    <div class="titulo-card">
+        <h3>Lian Li O11 Dynamic EVO XL</h3>
+    </div>
+
+    <p>$5,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Lian Li O11 Dynamic EVO XL', 5000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/gabinete12.jpg') }}" alt="Gabinete">
+
+    <div class="titulo-card">
+        <h3>ASUS ROG Hyperion GR701</h3>
+    </div>
+
+    <p>$11,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('ASUS ROG Hyperion GR701', 11500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/gabinete13.webp') }}" alt="Gabinete">
+
+    <div class="titulo-card">
+        <h3>Cooler Master Cosmos C700</h3>
+    </div>
+
+    <p>$8,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Cooler Master Cosmos C700', 8500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/gabinete14.webp') }}" alt="Gabinete">
+
+    <div class="titulo-card">
+        <h3>InWin Dubili Gold</h3>
+    </div>
+
+    <p>$7,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('InWin Dubili Gold', 7500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/gabinete15.jpg') }}" alt="Gabinete">
+
+    <div class="titulo-card">
+        <h3>Corsair Air 5400</h3>
+    </div>
+
+    <p>$10,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Corsair Air 5400', 10500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    <script>
+        function mostrarGama(gama) {
+            document.getElementById("baja").style.display = "none";
+            document.getElementById("media").style.display = "none";
+            document.getElementById("alta").style.display = "none";
+
+            if (gama !== "") {
+                document.getElementById(gama).style.display = "grid";
+            }
+        }
+    </script>
+
+<script>
+function agregarAlCarrito(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    carrito.push({ nombre, precio });
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    actualizarContadorCarrito(); // 🔥 IMPORTANTE
+
+    alert(nombre + " agregado al carrito 🛒");
+}
+</script>
+
+<script>
+function actualizarContadorCarrito() {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    document.getElementById("contador-carrito").textContent = carrito.length;
+}
+
+// Ejecutar al cargar
+actualizarContadorCarrito();
+</script>
+
+</body>
+</html>

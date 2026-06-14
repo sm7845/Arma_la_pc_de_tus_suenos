@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona Componentes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/compra.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="para_que.html">Guía paso a paso</a></li>
+            <li><a href="componentes.html">Consigue tus componentes!!</a></li>
+
+            <!-- Carrito -->
+            <li style="margin-left:auto;">
+                <a href="carrito.html">
+                    🛒 <span id="contador-carrito">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Selecciona tu gama</h1>
+        <p>Elige una categoría para ver los componentes recomendados.</p>
+    </section>
+
+    <div class="selector">
+        <select onchange="mostrarGama(this.value)">
+            <option value="">Selecciona una opción</option>
+            <option value="baja">Gama baja</option>
+            <option value="media">Gama media</option>
+            <option value="alta">Gama alta</option>
+        </select>
+    </div>
+
+    <div id="baja" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ram1.webp') }}" alt="Ram">
+
+    <div class="titulo-card">
+        <h3>Kingston FURY Beast DDR4 8GB 3200MHz</h3>
+    </div>
+
+    <p>$960 MXN</p>
+
+    <button onclick="agregarAlCarrito('Kingston FURY Beast DDR4 8GB 3200MHz', 960)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ram2.webp') }}" alt="Ram">
+
+    <div class="titulo-card">
+        <h3>teamGroup T-Force Vulcan Z DDR4 8GB 3200MHz</h3>
+    </div>
+
+    <p>$1,700 MXN</p>
+
+    <button onclick="agregarAlCarrito('teamGroup T-Force Vulcan Z DDR4 8GB 3200MHz', 1700)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ram3.webp') }}" alt="Ram">
+
+    <div class="titulo-card">
+        <h3>Adata DDR4 8GB 3200MHz UDIMM</h3>
+    </div>
+
+    <p>$1,230 MXN</p>
+
+    <button onclick="agregarAlCarrito('Adata DDR4 8GB 3200MHz UDIMM', 1230)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+       <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ram4.jpg') }}" alt="Ram">
+
+    <div class="titulo-card">
+        <h3>TeamGroup Elite Plus DDR4 8GB 3200MHz</h3>
+    </div>
+
+    <p>$1,200 MXN</p>
+
+    <button onclick="agregarAlCarrito('TeamGroup Elite Plus DDR4 8GB 3200MHz', 1200)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ram5.webp') }}" alt="Ram">
+
+    <div class="titulo-card">
+        <h3>XPG Spectrix D35 DDR4 8GB 3200MHz</h3>
+    </div>
+
+    <p>$2,900 MXN</p>
+
+    <button onclick="agregarAlCarrito('XPG Spectrix D35 DDR4 8GB 3200MHz', 2900)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="media" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ram6.jpg') }}" alt="Ram">
+
+    <div class="titulo-card">
+        <h3>Kingston FURY Beast DDR4 16GB 3200MHz</h3>
+    </div>
+
+    <p>$4,100 MXN</p>
+
+    <button onclick="agregarAlCarrito('Kingston FURY Beast DDR4 16GB 3200MHz', 4100)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ram7.jpg') }}" alt="Ram">
+
+    <div class="titulo-card">
+        <h3>Corsair Vengeance DDR5 32GB (2x16GB)</h3>
+    </div>
+
+    <p>$8,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Corsair Vengeance DDR5 32GB (2x16GB)', 8500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ram8.jpg') }}" alt="Ram">
+
+    <div class="titulo-card">
+        <h3>TeamGroup T-Force Delta RGB DDR5 16GB</h3>
+    </div>
+
+    <p>$10,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('TeamGroup T-Force Delta RGB DDR5 16GB', 10000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ram9.jpg') }}" alt="Ram">
+
+    <div class="titulo-card">
+        <h3>Kingston FURY Beast RGB DDR4 16GB 3200MHz</h3>
+    </div>
+
+    <p>$1,600 MXN</p>
+
+    <button onclick="agregarAlCarrito('Kingston FURY Beast RGB DDR4 16GB 3200MHz', 1600)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ram10.jpg') }}" alt="Ram">
+
+    <div class="titulo-card">
+        <h3>Patriot Viper Steel DDR4 16GB (2x8GB) 4400MHz</h3>
+    </div>
+
+    <p>$1,300 MXN</p>
+
+    <button onclick="agregarAlCarrito('Patriot Viper Steel DDR4 16GB (2x8GB) 4400MHz', 1300)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+
+    </div>
+
+    <div id="alta" class="contenedor-cards">
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ram11.png') }}" alt="Ram">
+
+    <div class="titulo-card">
+        <h3>Corsair Dominator Titanium RGB DDR5 32GB (2x16GB) 7000MHz</h3>
+    </div>
+
+    <p>$11,700 MXN</p>
+
+    <button onclick="agregarAlCarrito('Corsair Dominator Titanium RGB DDR5 32GB (2x16GB) 7000MHz', 11700)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ram12.webp') }}" alt="Ram">
+
+    <div class="titulo-card">
+        <h3>G.Skill Trident Z5 Neo RGB DDR5 32GB (2x16GB) 6000MHz</h3>
+    </div>
+
+    <p>$8,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('G.Skill Trident Z5 Neo RGB DDR5 32GB (2x16GB) 6000MHz', 8500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ram13.png') }}" alt="Ram">
+
+    <div class="titulo-card">
+        <h3>Kingston FURY Renegade RGB DDR5 32GB</h3>
+    </div>
+
+    <p>$5,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('Kingston FURY Renegade RGB DDR5 32GB', 5500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ram14.jpg') }}" alt="Ram">
+
+    <div class="titulo-card">
+        <h3>Corsair Dominator Platinum RGB DDR5 32GB</h3>
+    </div>
+
+    <p>$9,000 MXN</p>
+
+    <button onclick="agregarAlCarrito('Corsair Dominator Platinum RGB DDR5 32GB', 9000)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+
+        <div class="card">
+    <img class="principal" src="{{ url_for('static', filename='css/images/ram15.jpg') }}" alt="Ram">
+
+    <div class="titulo-card">
+        <h3>TeamGroup T-Force Vulcan Alpha DDR5 32GB</h3>
+    </div>
+
+    <p>$5,500 MXN</p>
+
+    <button onclick="agregarAlCarrito('TeamGroup T-Force Vulcan Alpha DDR5 32GB', 5500)">
+        Agregar al carrito 🛒
+    </button>
+</div>
+    </div>
+    <script>
+        function mostrarGama(gama) {
+            document.getElementById("baja").style.display = "none";
+            document.getElementById("media").style.display = "none";
+            document.getElementById("alta").style.display = "none";
+
+            if (gama !== "") {
+                document.getElementById(gama).style.display = "grid";
+            }
+        }
+    </script>
+
+<script>
+function agregarAlCarrito(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    carrito.push({ nombre, precio });
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    actualizarContadorCarrito(); // 🔥 IMPORTANTE
+
+    alert(nombre + " agregado al carrito 🛒");
+}
+</script>
+
+<script>
+function actualizarContadorCarrito() {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    document.getElementById("contador-carrito").textContent = carrito.length;
+}
+
+// Ejecutar al cargar
+actualizarContadorCarrito();
+</script>
+
+</body>
+</html>

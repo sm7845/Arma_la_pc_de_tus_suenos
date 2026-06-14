@@ -1,0 +1,1021 @@
+    <!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gama Baja | Componentes Recomendados</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/recomendaciones.css') }}">
+    </head>
+
+    <body>
+
+        <!-- ===================== NAVBAR ===================== -->
+
+        <nav>
+            <ul>
+
+                <li><a href="/">Inicio</a></li>
+                <li><a href="para_que.html">Guía paso a paso</a></li>
+                <li><a href="componentes.html">Consigue tus componentes!!</a></li>
+
+                <li style="margin-left:auto;">
+                    <a href="carrito.html">
+                        🛒 <span id="contador-carrito">0</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+        <!-- ===================== NAVBAR DE COMPONENTES ===================== -->
+
+        <nav class="navbar-componentes">
+
+          <a href="#procesadores">🖥 Procesadores</a>
+
+          <a href="#ram">🧠 RAM</a>
+
+          <a href="#ssd">💾 SSD</a>
+
+          <a href="#motherboards">🧩 Motherboard</a>
+
+          <a href="#fuentes">⚡ Fuente</a>
+
+          <a href="#graficas">🎮 Gráfica</a>
+
+          <a href="#configuracion">⭐ Configuración</a>
+
+          <a href="#usos">✅ Usos</a>
+
+        </nav>
+
+        <!-- ===================== HERO ===================== -->
+
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <span class="etiqueta">Gama Baja</span>
+
+                <h1>
+                    Componentes recomendados para una PC para jugar videojuegos de gama baja =)
+                </h1>
+
+                <p>
+                    Encuentra una selección de componentes ideales para juegos no tan pesados y que no
+                     requieren mucho poder de parte de la computadora, juegos como: DOOM clasico, Half Life 2, Left 4 Dead etc...
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== CONFIGURACIÓN ===================== -->
+
+        <section class="configuracion">
+
+            <h2>⭐ Configuración recomendada</h2>
+
+            <div class="config-grid">
+
+                <div class="config-item">
+                    <h4>Procesador</h4>
+                    <p>Ryzen 5 5600G</p>
+                </div>
+
+                <div class="config-item">
+                    <h4>Memoria RAM</h4>
+                    <p>Kingston Fury Beast</p>
+                </div>
+
+                <div class="config-item">
+                    <h4>SSD</h4>
+                    <p>Kingston NV2</p>
+                </div>
+
+                <div class="config-item">
+                    <h4>Motherboard</h4>
+                    <p>MSI a620m-e</p>
+                </div>
+
+                <div class="config-item">
+                    <h4>Fuente</h4>
+                    <p>Corsair CX550</p>
+                </div>
+
+                <div class="config-item">
+                    <h4>Gráficos</h4>
+                    <p>INTEL ARC B580</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== PROCESADORES ===================== -->
+
+        <section id="procesadores" class="categoria">
+
+            <div class="titulo-seccion">
+
+                <h2>🖥 Procesadores</h2>
+
+                <p>
+                    El cerebro de la computadora. Determina el rendimiento general del equipo.
+                </p>
+
+            </div>
+
+            <div class="grid-componentes">
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/ryzen.jpg') }}" alt="Procesador">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+                            ⭐ Recomendado
+                        </span>
+
+                        <h3>AMD Ryzen 5 5600G</h3>
+
+                        <div class="specs">
+
+                            <span>6 Núcleos</span>
+                            <span>Gráficos Integrados</span>
+                            <span>65W</span>
+
+                        </div>
+
+                        <p>
+
+                            No necesita gráfica y menos con juegos ligeros<br>
+                            Excelente multitarea<br>
+                            Muy recomendado para empezar<br>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/intel_rec.webp') }}" alt="Procesador">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+                            🔥 Calidad / Precio
+                        </span>
+
+                        <h3>Intel core i3-12100f</h3>
+
+                        <div class="specs">
+
+                            <span>4 Núcleos</span>
+                            <span>8 Hilos</span>
+                            <span>58W</span>
+
+                        </div>
+
+                        <p>
+
+                            Muy buena al combinarse con una tarjeta grafica<br>
+                            Compatible con DDR4 y DDR5<br>
+                            Bajo consumo energetico<br>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/amd_rec.webp') }}" alt="Procesador">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+                            💰 Económico
+                        </span>
+
+                        <h3>AMD Ryzen 3 4100G</h3>
+
+                        <div class="specs">
+
+                            <span>4 Núcleos</span>
+                            <span>8 Hilos</span>
+                            <span>65W</span>
+
+                        </div>
+
+                        <p>
+
+                            Bueno al combinarlo con una GPU<br>
+                            Bajo consumo de energia<br>
+                            Económico<br>
+
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== MEMORIAS RAM ===================== -->
+
+        <section id="ram" class="categoria">
+
+            <div class="titulo-seccion">
+
+                <h2>🧠 Memorias RAM</h2>
+
+                <p>
+                    La memoria RAM permite ejecutar varias aplicaciones al mismo tiempo
+                    de forma fluida eh influye mucho a la hora de jugar.
+                </p>
+
+            </div>
+
+            <div class="grid-componentes">
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/kingston.jpg') }}" alt="Kingston Fury">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+                            ⭐ Más recomendada
+                        </span>
+
+                        <h3>Kingston Fury Beast</h3>
+
+                        <div class="specs">
+
+                            <span>16 GB</span>
+                            <span>3200 MHz</span>
+                            <span>DDR4</span>
+
+                        </div>
+
+                        <p>
+
+                        Muy compatible con Ryzen e Intel<br>
+                        Excelente para estabilidad y velocidad<br>
+                        Disipador termico<br>
+
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/crucial.webp') }}" alt="crucial">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+                            🔥 Calidad / Precio
+                        </span>
+
+                        <h3>Crucial</h3>
+
+                        <div class="specs">
+
+                            <span>8 GB</span>
+                            <span>3200 MT/s</span>
+                            <span>DDR4</span>
+
+                        </div>
+
+                        <p>
+
+                            Mejora la velociad del sistema<br>
+                            Bajo consumo de energia<br>
+                            Facil instalacion<br>
+
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/adata.jpg') }}" alt="Adata">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+
+                              Economico
+
+                        </span>
+
+                        <h3>ADATA Premier</h3>
+
+                        <div class="specs">
+
+                            <span>8 GB</span>
+                            <span>3200 MHz</span>
+                            <span>DDR4</span>
+
+                        </div>
+
+                        <p>
+
+                            Excelente rendimiento<br>
+                            Compatible con Intel y AMD<br>
+                            Buena para futuras upgrades<br>
+                            Bajo consumo energetico<br>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== SSD ===================== -->
+
+        <section id="ssd" class="categoria">
+
+            <div class="titulo-seccion">
+
+                <h2>💾 Unidades SSD</h2>
+
+                <p>
+                    Un SSD mejora considerablemente la velocidad de inicio del sistema
+                    y la carga de los juegos y cualquier juego en general.
+                </p>
+
+            </div>
+
+            <div class="grid-componentes">
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/ssd.jpg') }}" alt="Kingston NV2">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+
+                            ⭐ Recomendado
+
+                        </span>
+
+                        <h3>Kingston NV2</h3>
+
+                        <div class="specs">
+
+                            <span>500 GB</span>
+                            <span>NVMe</span>
+                            <span>PCIe 4.0</span>
+
+                        </div>
+
+                        <p>
+
+                            Muy rápido<br>
+                            Bueno para todos los programas en general<br>
+                            Excelente precio<br>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/crucial2.webp') }}" alt="Crucial">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+
+                            🔥 Calidad precio
+
+                        </span>
+
+                        <h3>Crucial P3</h3>
+
+                        <div class="specs">
+
+                            <span>500 GB</span>
+                            <span>NVMe</span>
+                            <span>M.2 2280</span>
+
+                        </div>
+
+                        <p>
+
+                            Excelente velocidad<br>
+                            Muy durable<br>
+                            Facil instalacion<br>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/legend.jpg') }}" alt="ADATA">
+
+                    <div class="card-body">
+
+                        <span class="badge">
+
+                              Economico
+
+                        </span>
+
+                        <h3>ADATA Legend 710</h3>
+
+                        <div class="specs">
+
+                            <span>512 GB</span>
+                            <span>NVMe 1.4</span>
+                            <span>Lectura de 2400MB/s</span>
+
+                        </div>
+
+                        <p>
+
+                            Muy rápida<br>
+                            Excelente estabilidad<br>
+                            Contiene tecnologias de proteccion<br>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+            <!-- ===================== TARJETAS MADRE ===================== -->
+
+        <section id="motherboards" class="categoria"></section>
+
+            <div class="titulo-seccion">
+
+                <h2>🧩 Tarjetas Madre</h2>
+
+                <p>
+                    La motherboard conecta todos los componentes del equipo y permite futuras actualizaciones.
+                </p>
+
+            </div>
+
+            <div class="grid-componentes">
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/msi_pro.jpg') }}" alt="MSI">
+
+                    <div class="card-body">
+
+                        <span class="badge">⭐ Recomendada</span>
+
+                        <h3>MSI a620m-e</h3>
+
+                        <div class="specs">
+
+                            <span>AMD A620</span>
+                            <span>AM5</span>
+                            <span>Memoria RAM: 2 ranuras DDR5</span>
+
+                        </div>
+
+                        <p>
+
+                            Ideal para Ryzen<br>
+                            Admite DDR5<br>
+                            Buena para futuras updates<br>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/a620.jpg') }}" alt="GIGABYTE">
+
+                    <div class="card-body">
+
+                        <span class="badge">🔥 Calidad / Precio</span>
+
+                        <h3>GIGABYTE A620m H</h3>
+
+                        <div class="specs">
+
+                            <span>AMD A620</span>
+                            <span>2 ranuras DDR5</span>
+                            <span>AM5</span>
+
+                        </div>
+
+                        <p>
+
+                            Muy estable<br>
+                            Compatible con AM5<br>
+                            Soporta DDR5<br>
+                            Muy util para la instalacion<br>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/prime.jpg') }}" alt="ASUS">
+
+                    <div class="card-body">
+
+                        <span class="badge"> Economico</span>
+
+                        <h3>ASUS Prime A520M-E</h3>
+
+                        <div class="specs">
+
+                            <span>AM4</span>
+                            <span>DDR4</span>
+                            <span>M.2</span>
+
+                        </div>
+
+                        <p>
+
+                            Buena calidad<br>
+                            Compatible con Ryzen<br>
+                            Muy durable y de buen precio<br>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== FUENTES ===================== -->
+
+        <section id="fuentes" class="categoria"></section>
+
+            <div class="titulo-seccion">
+
+                <h2>⚡ Fuentes de Poder</h2>
+
+                <p>
+                    Una buena fuente garantiza estabilidad y protege los demás componentes del equipo mientras juegas.
+                </p>
+
+            </div>
+
+            <div class="grid-componentes">
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/corsair.jpg') }}" alt="Corsair">
+
+                    <div class="card-body">
+
+                        <span class="badge">⭐ Recomendada</span>
+
+                        <h3>Corsair CX550</h3>
+
+                        <div class="specs">
+
+                            <span>550W</span>
+
+                            <span>80 Plus Bronze</span>
+
+                            <span>Muy confiable</span>
+
+                        </div>
+
+                        <p>
+
+                            Muy silenciosa<br>
+                            Excelente durabilidad<br>
+                            Buena si luego quieres mejorar la PC<br>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/evga.webp') }}" alt="EVGA">
+
+                    <div class="card-body">
+
+                        <span class="badge">💰 Económica</span>
+
+                        <h3>EVGA 500BR</h3>
+
+                        <div class="specs">
+
+                            <span>500W</span>
+
+                            <span>80 Plus Bronze</span>
+
+                            <span>Silenciosa</span>
+
+                        </div>
+
+                        <p>
+
+                            Certificación 80 Plus Bronze<br>
+                            Ventilador: 120 mm<br>
+                            No es modular<br>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <img src="{{ url_for('static', filename='css/images/p650.jpg') }}" alt="P650">
+
+                    <div class="card-body">
+
+                        <span class="badge">🔥 Mejor calidad</span>
+
+                        <h3>GIGABYTE P450B</h3>
+
+                        <div class="specs">
+
+                            <span>450W</span>
+
+                            <span>80 Plus Bronze</span>
+
+                            <span>No modular</span>
+
+                        </div>
+
+                        <p>
+
+                            Muy estable<br>
+                            Buena refrigeración<br>
+                            Protección contra sobrecargas<br>
+                            Excelente calidad-precio<br>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== TARJETA GRÁFICA ===================== -->
+
+        <section id="graficas" class="categoria">
+
+                   <div class="titulo-seccion">
+
+            <h2>🎮 Tarjetas Graficas</h2>
+
+            <p>
+                Para cualquier videojuego incluso de gama baja lo mejor es una tarjeta grafica para que todo vaya de 10.
+            </p>
+
+        </div>
+
+        <div class="grid-componentes">
+
+            <!-- CARD -->
+
+            <div class="card">
+
+                <img src="{{ url_for('static', filename='css/images/ARC.jpg') }}" alt="Tarjeta_grafica">
+
+                <div class="card-body">
+
+                    <span class="badge">
+                        ⭐ Recomendado
+                    </span>
+
+                    <h3>INTEL ARC B580</h3>
+
+                    <div class="specs">
+
+                        <span>456 GB/s</span>
+                        <span>12 GB GDDR6</span>
+                        <span>PCIe 4.0 x8</span>
+
+                    </div>
+
+                    <p>
+
+                        Excelente en 1080p y 1440p<br>
+                        Excelente uso de sus 12gb<br>
+                        Mayor margen para futuros juegos<br>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CARD -->
+
+            <div class="card">
+
+                <img src="{{ url_for('static', filename='css/images/radeon.jpg') }}" alt="Tarjeta_grafica">
+
+                <div class="card-body">
+
+                    <span class="badge">
+                        🔥 Calidad / Precio
+                    </span>
+
+                    <h3>AMD Radeon rx 7600</h3>
+
+                    <div class="specs">
+
+                        <span>RDNA 3</span>
+                        <span>8 GB GDDR6</span>
+                        <span>128 bits</span>
+
+                    </div>
+
+                    <p>
+
+                        Perfecta para 1080p<br>
+                        Bajo consumo de energia<br>
+                        Compatible con FSR<br>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CARD -->
+
+            <div class="card">
+
+                <img src="{{ url_for('static', filename='css/images/rtx.jpg') }}" alt="Trajeta_grafica">
+
+                <div class="card-body">
+
+                    <span class="badge">
+                        💰 Económico
+                    </span>
+
+                    <h3>NVIDIA GEFORCE RTX 3050</h3>
+
+                    <div class="specs">
+
+                        <span>8 GB GDDR6</span>
+                        <span>130W</span>
+                        <span>Ray Tracing</span>
+
+                    </div>
+
+                    <p>
+
+                        Muy buena en los juegos basicos en 1080p<br>
+                        Bajo consumo energetico<br>
+                        DLSS<br>
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+        <!-- ===================== CONFIGURACIÓN FINAL ===================== -->
+
+        <section id="configuracion" class="configuracion-final">
+
+            <div class="titulo-seccion">
+
+                <h2>🖥 Configuración Recomendada</h2>
+
+                <p>
+                    Esta es una configuración equilibrada para una computadora para videojuegos de gama baja.
+                    Puedes modificar cualquier componente según tu presupuesto.
+                </p>
+
+            </div>
+
+            <div class="tabla-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Componente</th>
+                            <th>Recomendación</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Procesador</td>
+                            <td>AMD Ryzen 5 5600G</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Memoria RAM</td>
+                            <td>Kingston Fury Beast</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>SSD</td>
+                            <td>Kingston NV2 500 GB</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Tarjeta Madre</td>
+                            <td>MSI a620m-e</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Fuente</td>
+                            <td>Corsair CX550</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Tarjeta Gráfica</td>
+                            <td>INTEL ARC B580</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== USOS ===================== -->
+
+        <section id="usos" class="usos">
+
+            <div class="titulo-seccion">
+
+                <h2>✅ Esta computadora es ideal para:</h2>
+
+            </div>
+
+            <div class="grid-usos">
+
+                <div class="uso-card">
+                    📄
+                    <h3>Multitarea</h3>
+                </div>
+
+                <div class="uso-card">
+                    🌐
+                    <h3>Navegar por Internet</h3>
+                </div>
+
+                <div class="uso-card">
+                    🎬
+                    <h3>YouTube y Streaming</h3>
+                </div>
+
+                <div class="uso-card">
+                    💬
+                    <h3>Discord</h3>
+                </div>
+
+                <div class="uso-card">
+                    🎮
+                    <h3>Juegos De Gama Baja</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== FOOTER ===================== -->
+
+        <footer>
+
+            <div class="footer-contenido">
+
+                <h3>Proyecto Armado de PC</h3>
+
+                <p>
+                    Encuentra la mejor configuración para tus necesidades y aprende
+                    a elegir correctamente cada componente.
+                </p>
+
+                <p class="copyright">
+
+                    © 2026 - Todos los derechos reservados.
+
+                </p>
+
+            </div>
+
+        </footer>
+
+        <!-- ===================== SCRIPT CARRITO ===================== -->
+
+        <script>
+
+            function actualizarContadorCarrito() {
+
+                let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+                document.getElementById("contador-carrito").textContent = carrito.length;
+
+            }
+
+            actualizarContadorCarrito();
+
+        </script>
+
+    </body>
+
+    </html>    
