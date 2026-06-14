@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Arma tu PC</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/x.css') }}">
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="para_que.html">Guía paso a paso</a></li>
+        <li><a href="componentes.html">Consigue tus componentes!!</a></li>
+
+        <li style="margin-left:auto;">
+            <a href="carrito.html">
+                🛒 <span id="contador-carrito">0</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>Arma la PC de tus sueños</h1>
+
+        <p>
+            Aprende todo sobre los componentes de una computadora,
+            descubre cuál necesitas y consigue el mejor equipo para ti.
+        </p>
+
+        <div class="botones">
+
+            <a href="para_que.html" class="btn">
+                Comenzar guía
+            </a>
+
+            <a href="componentes.html" class="btn2">
+                Ver componentes
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-img">
+
+        <img src="{{ url_for('static', filename='css/images/caja.jpg') }}" alt="PC Gamer">
+
+    </div>
+
+</section>
+
+<section class="titulo">
+
+    <h2>¿Qué puedes hacer aquí?</h2>
+
+</section>
+
+<section class="cards">
+
+    <div class="card">
+
+        <h3>📖 Aprende</h3>
+
+        <p>
+            Descubre la función de cada componente
+            de una computadora paso a paso.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>🛒 Compra</h3>
+
+        <p>
+            Encuentra los componentes ideales
+            para construir la computadora que deseas.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="beneficios">
+
+    <h2>¿Por qué armar tu propia PC?</h2>
+
+    <div class="lista">
+
+        <div>✔ Mejor rendimiento</div>
+
+        <div>✔ Componentes de calidad</div>
+
+        <div>✔ Fácil de actualizar</div>
+
+        <div>✔ Personalización completa</div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    © 2026 | Proyecto Armado de PC
+
+</footer>
+
+<script>
+
+function actualizarContadorCarrito() {
+
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    document.getElementById("contador-carrito").textContent = carrito.length;
+
+}
+
+actualizarContadorCarrito();
+
+</script>
+
+</body>
+</html>
